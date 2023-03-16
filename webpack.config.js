@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = "01_Zadanie";
+const entryPath = "development";
 
 module.exports = {
   mode: "none",
@@ -13,7 +13,7 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    open: false,
+    open: true,
     hot: true,
     static: [
       {
