@@ -1,15 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = "development";
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: "none",
-  entry: `./${entryPath}/js/app.js`,
+  entry: `./development/js/app.js`,
   devtool: "inline-source-map",
   output: {
     filename: "out.js",
-    path: path.resolve(__dirname, `${entryPath}/build`),
+    path: path.resolve(__dirname, `build`),
     clean: true,
   },
   devServer: {
@@ -17,7 +18,7 @@ module.exports = {
     hot: true,
     static: [
       {
-        directory: path.join(__dirname, entryPath),
+        directory: path.join(__dirname),
         publicPath: "/",
         serveIndex: true,
       },
@@ -51,5 +52,6 @@ module.exports = {
     new webpack.ProvidePlugin({
       process: "process/browser",
     }),
+    new HtmlWebpackPlugin()
   ],
 };
