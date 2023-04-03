@@ -1,0 +1,14 @@
+.paragraph {
+  width: 100%;
+
+  &--title {
+    @include general-font($font-Mont, 1.5rem, bold, $col-white);
+    padding-bottom: 20px;
+    line-height: 1.5rem;
+
+    &_text {
+      @include general-font($font-Mont, 1rem, normal, $col-rose);
+      line-height: 1.5rem;
+    }
+  }
+}

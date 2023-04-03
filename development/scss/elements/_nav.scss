@@ -1,0 +1,59 @@
+.navWrapping {
+  height: 13vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  @include general-font($font-Play, 1.75rem, bold, $col-white);
+  text-decoration: none;
+  padding-left: 100px;
+  letter-spacing: 1rem;
+}
+
+.nav {
+  width: 20vw;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.navLink, .journey {
+  @include general-font($font-Play, 1.5rem, normal, $col-white);
+  text-decoration: none;
+  transition: color, 1s, 0.5s;
+
+  &:link, &:active, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $col-rose;
+  }
+}
+
+.navLink1 {
+  font-weight: bold;
+}
+
+.journey {
+  padding-right: 100px;
+  color: $col-rose;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0,0,0,0);
+
+  &:hover {
+    color: $col-white;
+  }
+}
+
+span {
+  position: absolute;
+  content: "\27F6";
+  top: -4px;
+  left: -35px;
+}

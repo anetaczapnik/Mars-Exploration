@@ -1,0 +1,13 @@
+.rocket {
+  //background-image: url("https://media.istockphoto.com/id/1080635372/video/cartoon-rocket-starts-into-space.jpg?s=480x480&k=20&c=-DxdmWJhwfdKoZ9rmg6F4ilPD0lYMYXI0UybLCGuwLU=");
+  background-image: url("https://www.icegif.com/wp-content/uploads/spaceship-icegif-2.gif");
+  width: 25vw;
+  position: fixed;
+  height: 25vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

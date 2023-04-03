@@ -36,6 +36,15 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader",
       },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
     ],
   },
   plugins: [

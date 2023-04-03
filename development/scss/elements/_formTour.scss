@@ -1,0 +1,209 @@
+.formBackground {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(45,25,30,0.5);
+  z-index: 80;
+  scroll-behavior: unset;
+  overflow: hidden;
+}
+
+/*.formWrapper {
+  border: 20px solid transparent;
+  border-image: linear-gradient(180deg, $col-sun, $col-mocha);
+  border-image-slice: 1;
+  position: fixed;
+  z-index: 100;
+  width: calc(100vw / 8 * 4);
+  height: 100vh;
+  top: 0;
+  left: calc(100vw / 4);
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(20px);
+  margin: 0 auto;
+  text-align: center;
+  @include general-font($font-Mont, 2rem, normal, $col-peach);
+  box-sizing: border-box;
+}*/
+
+.formWrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 40%;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  $border: 20px;
+  background: #000;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 1em;
+  text-align: center;
+  @include general-font($font-Mont, 1.3rem, normal, $col-peach);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: 1em;
+    background: linear-gradient(180deg, $col-sun, $col-mocha);
+  }
+}
+
+.tourWrapper {
+  width: 70vw;
+}
+
+/*.formWrapper > * {
+  z-index: 100;
+}*/
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+
+  &__fields {
+    display: flex;
+    justify-content: center;
+
+    &:first-of-type {
+      padding-top: 20%;
+    }
+  }
+
+  &__fields > * {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__formInput, &__formTextarea--t {
+    color: $col-cork;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid $col-peach;
+    border-left: 1px solid $col-peach;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 10px;
+    align-items: flex-end;
+    @include general-font($font-Mont, 1.2rem, normal, $col-peach);
+
+    &:focus {
+      background-color: $col-peach;
+      outline: none;
+      @include general-font($font-Mont, 1.2rem, normal, $col-cork);
+    }
+  }
+
+  &__formInput:-webkit-autofill {
+    box-shadow: 0 0 0px 40px rgb(210, 158, 122) inset;
+    @include general-font($font-Mont, 1.2rem, normal, $col-cork);
+  }
+
+  &__formTextarea {
+
+    &--t {
+    width: 100%;
+    margin: 0 0 15px;
+    }
+
+    &--p {
+      height: 4vh;
+      margin-top: 15%;
+      text-align: left;
+    }
+  }
+}
+
+.booking {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2px;
+  right: 14px;
+  text-align: center;
+  @include general-font($font-Mont, 1.2rem, normal, $col-peach);
+}
+
+.close {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  color: $col-sun;
+}
+
+.submitBtn {
+  background-color: $col-peach;
+  border: 1px solid $col-cedar;
+  border-radius: 30px;
+  @include general-font($font-Mont, 1.2rem, normal, $col-cedar);
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: color, 0.5s, 0.5s;
+
+  &:hover {
+    background-color: rgb(196, 145, 111);
+    transition: color, 0.5s, 0.5s;
+  }
+
+  &:active {
+    background-color: rgb(169, 71, 0);
+    transition: color, 0.5s, 0.5s;
+  }
+}
+
+.tableContainer {
+  overflow: scroll;
+  max-height: 80vh;
+}
+
+.candidates {
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: center;
+}
+
+.table-title {
+  padding: 50px;
+  @include general-font($font-Mont, 2rem, bold, $col-peach);
+}
+
+th, td {
+  border-bottom: 1px solid $col-peach;
+  text-align: center;
+  padding: 10px;
+  width: 14%;
+  vertical-align: middle;
+
+  &:last-child {
+    width: 40%;
+  }
+}
+
+tr {
+  @include general-font($font-Mont, 1rem, normal, $col-peach);
+
+  &:not(:first-child):hover {
+    background-color: rgba(203,186,174,0.5);
+    transition: color, 0.5s, 0.5s;
+  }
+}
+
+th {
+  @include general-font($font-Mont, 1.1rem, bold, $col-peach);
+  text-align: center;
+  padding-bottom: 20px;
+}

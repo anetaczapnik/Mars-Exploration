@@ -1,0 +1,29 @@
+.footer {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  background-color: $col-cinder;
+  box-shadow: 0 -5px 20px $col-grey;
+  z-index: 6;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright, .contact, .figmaLink {
+  @include general-font($font-RedHat, 1rem, normal, $col-sand);
+  width: 20%;
+  padding-top: 1.5%;
+}
+
+.figmaLink {
+
+  &:link, &:active, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $col-white;
+  }
+}

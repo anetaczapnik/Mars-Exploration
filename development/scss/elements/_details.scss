@@ -1,0 +1,39 @@
+.detailsWrapping {
+  height: 79vh;
+  width: 100vw;
+  display: flex;
+}
+
+.details {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 40vh;
+  border-radius: 20px;
+  background-color: rgba(36, 36, 36, 0.3);
+  backdrop-filter: blur(20px);
+  margin: 0 auto;
+  @include general-font($font-Mont, 2rem, normal, $col-rose);
+
+  &--title {
+    @include general-font($font-Mont, 1.5rem, bold, $col-white);
+    padding-bottom: 20px;
+    line-height: 1.5rem;
+
+    &_text {
+      @include general-font($font-Mont, 1rem, normal, $col-rose);
+      line-height: 1.5rem;
+      padding-bottom: 20px;
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+  }
+}
