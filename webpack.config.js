@@ -52,6 +52,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       process: "process/browser",
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'development/index.html'
+    })
   ],
 };
